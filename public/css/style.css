@@ -1,0 +1,94 @@
+/* COLORS */
+/* 1. rgb(32, 137, 197) */
+/* 2.  */
+
+/* HTML, BODY */
+html,
+body{
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* SECTIONS - ALL */
+/*====================================================
+                        HOME
+======================================================*/
+
+#home {
+    height: 100%;
+}
+
+#home-cover {
+    height: 100%;
+    background-image: url("../img/bg-home.jpg");
+}
+
+#home-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    /* text-align: center; */
+}
+
+#home-heading h3 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+/*====================================================
+                        PARALLAX (Generic)
+======================================================*/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Buttons */
+.button-general{
+    background-color: #fff;
+    border-radius: 4px;
+    border-style: .4px solid #000;
+    font-size: 17px;
+    font-weight: 500;
+    height: 40px;
+    width: 150px;
+}
+.button-general:focus{
+    outline: none;
+}
+
+/* H3 : title :  */
+h3.title{
+    color: rgb(32, 137, 197);
+    font-size: 30px;
+}
+h3.title_rgb{
+    background: -webkit-linear-gradient(rgb(32, 137, 197), rgb(51, 187, 119));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* CONTENT */
+div.content{
+    text-align: center !important;
+}
+
+
+/* FULL */
+
+
+/* RESPONSIVE - responsive.css */
