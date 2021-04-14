@@ -27,6 +27,10 @@ body{
     -moz-background-size:  cover;
     -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #home-content-box {
@@ -53,10 +57,10 @@ body{
 ======================================================*/
 
 .bg-parallax {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
 }
 
 
@@ -76,6 +80,7 @@ body{
 .btn-white {
     border-color: #fff !important;
     color: #fff !important;
+    transition: .2s ease-in-out;
 }
 
 .btn-white:hover,
@@ -179,6 +184,20 @@ div.content{
 
 
 /* FULL */
+
+/* GENERIC ROW BOOTSTRAP */
+.row{
+    width: 100% !important;
+}
+
+/*====================================================
+                       MAIN (Generic)
+======================================================*/
+#main{
+    height: 300px !important;
+    width: 100% !important;
+    background-color: rgba(243, 243, 243, .7) !important;
+}
 
 
 /* RESPONSIVE - responsive.css */
