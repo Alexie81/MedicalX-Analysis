@@ -1,3 +1,21 @@
+
+/*====================================================
+                        FIREBASE
+====================================================*/
+var firebaseConfig = {
+    apiKey: "AIzaSyBXWdtGzaFYTU9xePsA_2YelVydbYl8q98",
+    authDomain: "medicalx-analysis.firebaseapp.com",
+    projectId: "medicalx-analysis",
+    storageBucket: "medicalx-analysis.appspot.com",
+    messagingSenderId: "409381242479",
+    appId: "1:409381242479:web:6512eaeee5fe38345c6f9a",
+    measurementId: "G-ZJ5CN8RE5H"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+
 /*====================================================
                         SERVICES
 ====================================================*/
