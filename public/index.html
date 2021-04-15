@@ -20,6 +20,12 @@
     <body>
 
 
+        <div id="mySidenav" class="sidenav">
+            <a href="#home" id="home_side" class="smooth-scroll">Home</a>
+            <a href="#main" id="analysis_side" class="smooth-scroll">Analysis</a>
+            <a href="#" id="contact_side" class="smooth-scroll">Contact</a>
+          </div>
+
         <section id="home">
 
             <div id="home-cover" class="bg-parallax animated fadeIn">
@@ -44,13 +50,51 @@
         </section>
 
 
-        <section id="main" align="center">
+        <section id="main">
 
-                <div class="col-md-4">
+                <div class="col-md-12" style="margin-top: 30px !important;" align="center">
                     <h3>Buletin de analize medicale</h3>
+                    <div class="content-title-underline"></div>
                 </div>
+                <div class="row">
+                <div class="col-lg-6" style="float: none !important;margin: 0 auto !important;">
+                    <form>
+                        <div class="form-group">
+                          <h3>Hematologie</h3>
+                          <div class="row">
+                          <div class="form-group col-md-12">
+                            <label for="hematologie_eritrocite">Nr. eritrocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_eritrocite" aria-describedby="emailHelp" placeholder="Nr. eritrocite...">
+                        </div>
+                    </div>
+                        <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="hematologie_hemoglobina">Hemoglobina: </label><br />
+                          <input type="number" class="form-control" id="hematologie_hemoglobina" aria-describedby="emailHelp" placeholder="Hemoglobina...">
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="hematologie_hematocrit">Hematocrit: </label><br />
+                          <input type="number" class="form-control" id="hematologie_hemoglobina" aria-describedby="emailHelp" placeholder="Hematocrit...">
+                        </div>
+                    </div>
 
+                        <!-- END FORM GROUP -->
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                </div>
         </section>
 
 

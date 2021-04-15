@@ -12,6 +12,10 @@ body{
 }
 
 /* SECTIONS - ALL */
+
+section{
+    width: 100% !important;
+}
 /*====================================================
                         HOME
 ======================================================*/
@@ -51,6 +55,39 @@ body{
     font-weight: 700;
     margin: 20px 0 20px 0;
 }
+
+/* SIDE NAV */
+#mySidenav a {
+    position: fixed ;
+    left: -100px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    z-index: 100;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #home_side {
+    top: 20px;
+    background-color: rgb(32, 137, 197, .8);
+  }
+  
+  #analysis_side {
+    top: 80px;
+    background-color: rgba(241, 68, 68, 0.8);
+  }
+  
+  #contact_side {
+    top: 140px;
+    background-color: rgb(99, 99, 99, .8);
+  }
 
 /*====================================================
                         PARALLAX (Generic)
@@ -158,9 +195,9 @@ body{
 }
 
 .content-title-underline {
-    width: 30px;
+    width: 100px;
     height: 3px;
-    background-color: #34c6d3;
+    background-color: rgb(32, 137, 197);
     margin: 0 auto 30px auto;
 }
 
@@ -194,10 +231,16 @@ div.content{
                        MAIN (Generic)
 ======================================================*/
 #main{
-    height: 300px !important;
+    height: 600px !important;
     width: 100% !important;
     background-color: rgba(243, 243, 243, .7) !important;
 }
 
 
 /* RESPONSIVE - responsive.css */
+
+/* COLS */
+.col-centered{
+    float: none !important;
+    margin: 0 auto !important;
+    }
