@@ -9,7 +9,10 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" type="icon/png" href="img/favicon/favicon.png">
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- GOOGLE fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap" rel="stylesheet">
         <!-- bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
@@ -21,9 +24,9 @@
 
 
         <div id="mySidenav" class="sidenav">
-            <a href="#home" id="home_side" class="smooth-scroll">Home</a>
-            <a href="#main" id="analysis_side" class="smooth-scroll">Analysis</a>
-            <a href="#" id="contact_side" class="smooth-scroll">Contact</a>
+            <a href="#home" id="home_side" class="smooth-scroll">Home   <i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="#main" id="analysis_side" class="smooth-scroll">Analize    <i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+            <a href="#feedback" id="contact_side" class="smooth-scroll">Feedback    <i class="fa fa-commenting-o" aria-hidden="true"></i></a>
           </div>
 
         <section id="home">
@@ -52,52 +55,301 @@
 
         <section id="main">
 
-                <div class="col-md-12" style="margin-top: 30px !important;" align="center">
-                    <h3>Buletin de analize medicale</h3>
+                <div class="col-md-12 wow animated fadeInDown" data-wow-delay=".3s" style="margin-top: 30px !important;" align="center">
+                    <h3 class="content-title">Analize</h3>
                     <div class="content-title-underline"></div>
                 </div>
-                <div class="row">
-                <div class="col-lg-6" style="float: none !important;margin: 0 auto !important;">
-                    <form>
-                        <div class="form-group">
+                <div class="col-lg-8" style="float: none !important;margin: 0 auto !important;">
+                    <form class="wow animated fadeInLeft" data-wow-delay=".7s">
+                        <div class="form-group" id="hemoglobina_form_group">
                           <h3>Hematologie</h3>
                           <div class="row">
-                          <div class="form-group col-md-12">
+                          <div class="form-group col-md-6">
                             <label for="hematologie_eritrocite">Nr. eritrocite: </label><br />
                           <input type="number" class="form-control" id="hematologie_eritrocite" aria-describedby="emailHelp" placeholder="Nr. eritrocite...">
                         </div>
-                    </div>
-                        <div class="row">
-                        <div class="form-group col-md-12">
+
+                        <div class="form-group col-md-6">
                             <label for="hematologie_hemoglobina">Hemoglobina: </label><br />
                           <input type="number" class="form-control" id="hematologie_hemoglobina" aria-describedby="emailHelp" placeholder="Hemoglobina...">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-6">
                             <label for="hematologie_hematocrit">Hematocrit: </label><br />
                           <input type="number" class="form-control" id="hematologie_hemoglobina" aria-describedby="emailHelp" placeholder="Hematocrit...">
                         </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_vem">VEM: </label><br />
+                          <input type="number" class="form-control" id="hematologie_vem" aria-describedby="emailHelp" placeholder="VEM...">
+                        </div>
                     </div>
 
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_hem">HEM: </label><br />
+                          <input type="number" class="form-control" id="hematologie_hem" aria-describedby="emailHelp" placeholder="HEM...">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_chem">CHEM: </label><br />
+                          <input type="number" class="form-control" id="hematologie_chem" aria-describedby="emailHelp" placeholder="CHEM...">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_rdv_cv">RDV-CV: </label><br />
+                          <input type="number" class="form-control" id="hematologie_rdv_cv" aria-describedby="emailHelp" placeholder="RDV-CV...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_leucocite">Nr. leucocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_leucocite" aria-describedby="emailHelp" placeholder="Nr. leucocite...">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_neutrofile">Nr. neutrofile: </label><br />
+                          <input type="number" class="form-control" id="hematologie_neutrofile" aria-describedby="emailHelp" placeholder="Nr. neutrofile...">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_neutrofile_suta">% Neutrofile: </label><br />
+                          <input type="number" class="form-control" id="hematologie_neutrofile_suta" aria-describedby="emailHelp" placeholder="% Neutrofile...">
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_eozinofile">Nr. eozinofile: </label><br />
+                          <input type="number" class="form-control" id="hematologie_eozinofile" aria-describedby="emailHelp" placeholder="Nr. eozinofile...">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_eozinofile_suta">% Eozinofile: </label><br />
+                          <input type="number" class="form-control" id="hematologie_eozinofile_suta" aria-describedby="emailHelp" placeholder="% Eozinofile...">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_basofile">Nr. basofile: </label><br />
+                          <input type="number" class="form-control" id="hematologie_basofile" aria-describedby="emailHelp" placeholder="Nr. basofile...">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_basofile_suta">% Basofile: </label><br />
+                          <input type="number" class="form-control" id="hematologie_basofile_suta" aria-describedby="emailHelp" placeholder="% Basofile...">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_limfocite">Nr. limfocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_limfocite" aria-describedby="emailHelp" placeholder="Nr. limfocite...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_limfocite_suta">% Limfocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_limfocite_suta" aria-describedby="emailHelp" placeholder="% Limfocite...">
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_monocite">Nr. monocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_monocite" aria-describedby="emailHelp" placeholder="Nr. monocite...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_monocite_suta">% Monocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_monocite_suta" aria-describedby="emailHelp" placeholder="% Monocite...">
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_trombocite">Nr. trombocite: </label><br />
+                          <input type="number" class="form-control" id="hematologie_trombocite" aria-describedby="emailHelp" placeholder="Nr. trombocite...">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_vtm">VTM: </label><br />
+                          <input type="number" class="form-control" id="hematologie_vtm" aria-describedby="emailHelp" placeholder="VTM...">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_pct">PCT : </label><br />
+                          <input type="number" class="form-control" id="hematologie_pct" aria-describedby="emailHelp" placeholder="PCT...">
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label for="hematologie_pdw">PDW : </label><br />
+                          <input type="number" class="form-control" id="hematologie_pdw" aria-describedby="emailHelp" placeholder="PDW...">
+                        </div>
+                    </div>
                         <!-- END FORM GROUP -->
                         </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+
+                        <div class="form-group" id="test_sange_group">
+                            <h3>Coagulare / Hemostaza</h3>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                  <label for="hemostaza_timp">Timp: </label><br />
+                                <input type="number" class="form-control" id="hemostaza_timp" aria-describedby="emailHelp" placeholder="Timp(s)...">
+                              </div>
+      
+                              <div class="form-group col-md-6">
+                                  <label for="hemostaza_activitate">Activitate de protrombina: </label><br />
+                                <input type="number" class="form-control" id="hemostaza_activitate" aria-describedby="emailHelp" placeholder="Activitate de protrombina(%)...">
+                              </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="hemostaza_inr">INR: </label><br />
+                              <input type="number" class="form-control" id="hemostaza_inr" aria-describedby="emailHelp" placeholder="INR...">
+                            </div>
+                          </div>
                         </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+
+                        <div class="form-group" id="biochimie_group">
+                            <h3>Biochimie</h3>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                  <label for="biochimie_acid_uric">Acid uric: </label><br />
+                                <input type="number" class="form-control" id="biochimie_acid_uric" aria-describedby="emailHelp" placeholder="Acid uric...">
+                              </div>
+      
+                              <div class="form-group col-md-6">
+                                  <label for="biochimie_creatinina_serica">Creatinina serica: </label><br />
+                                <input type="number" class="form-control" id="biochimie_creatinina_serica" aria-describedby="emailHelp" placeholder="Creatinina serica...">
+                              </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="biochimie_uree_serica">Uree serica: </label><br />
+                              <input type="number" class="form-control" id="biochimie_uree_serica" aria-describedby="emailHelp" placeholder="Uree serica...">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="biochimie_glucoza_serica">Glucoza serica: </label><br />
+                              <input type="number" class="form-control" id="biochimie_glucoza_serica" aria-describedby="emailHelp" placeholder="Glucoza serica...">
+                            </div>
+                          </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="biochimie_tgo_ast">TGO/AST: </label><br />
+                              <input type="number" class="form-control" id="biochimie_tgo_ast" aria-describedby="emailHelp" placeholder="TGO/AST...">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="biochimie_tgp_alt">TGP/ALT: </label><br />
+                              <input type="number" class="form-control" id="biochimie_tgp_alt" aria-describedby="emailHelp" placeholder="TGP/ALT...">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="biochimie_sideremie">Sideremie: </label><br />
+                              <input type="number" class="form-control" id="biochimie_sideremie" aria-describedby="emailHelp" placeholder="Sideremie...">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group" id="imunologie_markeri_infectionsi_group">
+                            <h3>Imunologie - Markeri Infectiosi</h3>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="imunologie_ag_hbs">Ag HBs: </label><br />
+                                    <select class="form-control" id="imunologie_ag_hbs_select">
+                                        <option value="" selected disabled>--Selecteaza--</option>
+                                        <option value="Nonreactiv">Nonreactiv</option>
+                                        <option value="Reactiv">Reactiv</option>
+                                      </select> <br >
+                                  <input type="number" class="form-control" id="imunologie_ag_hbs" aria-describedby="emailHelp" placeholder="Valoare (S/CO)...">
+                                </div>
+    
+                                <div class="form-group col-md-6">
+                                    <label for="imunologie_anti_hcv">Ac Anti - HCV: </label><br />
+                                    <select class="form-control" id="imunologie_anti_hcv_select">
+                                        <option value="" selected disabled>--Selecteaza--</option>
+                                        <option value="Nonreactiv">Nonreactiv</option>
+                                        <option value="Reactiv">Reactiv</option>
+                                      </select> <br >
+                                  <input type="number" class="form-control" id="imunologie_anti_hcv" aria-describedby="emailHelp" placeholder="Valoare (S/CO)...">
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="imunologie_anti_hiv">Ac Anti - HIV 1/2: </label><br />
+                                    <select class="form-control" id="imunologie_anti_hiv_select">
+                                        <option value="" selected disabled>--Selecteaza--</option>
+                                        <option value="Nonreactiv">Nonreactiv</option>
+                                        <option value="Reactiv">Reactiv</option>
+                                      </select> <br >
+                                  <input type="number" class="form-control" id="imunologie_anti_hiv" aria-describedby="emailHelp" placeholder="Valoare (S/CO)...">
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="form-group" id="microbiologie_group">
+                            <h3>Microbiologie</h3>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label for="imunologie_anti_hiv">Urocultura: </label><br />
+                                    <select class="form-control" id="urocultura_mic">
+                                        <option value="" selected disabled>--Selecteaza--</option>
+                                        <option value="mic">Bacteriurie < 100 UFC/mL (sub limita de detectie a metodei)</option>
+                                        <option value="mare">Bacteriurie > 100 UFC/mL (peste limita de detectie a metodei)</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- SUBMIT -->
+                         <div class="row">
+                            <div class="form-group col-md-12" align="center">
+                        <button type="submit" class="btn btn-lg btn-primary">Vezi rezultate</button>
                     </div>
                 </div>
+                        </div>
+
+
+                       
+
+
+                      </form>
+                    </div>
+
         </section>
 
 
+
+        <section id="feedback">
+            <div class="col-md-12 wow animated fadeInDown" data-wow-delay=".3s" style="margin-top: 30px !important;" align="center">
+                <h3 class="content-title margin_top content-title-white">Feedback</h3>
+                <div class="content-title-underline"></div>
+            </div>
+        </section>
 
 
 

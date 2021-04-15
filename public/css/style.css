@@ -59,15 +59,33 @@ section{
 /* SIDE NAV */
 #mySidenav a {
     position: fixed ;
-    left: -100px;
+    left: -120px;
     transition: 0.3s;
     padding: 15px;
-    width: 150px;
+    width: 170px;
     text-decoration: none;
     font-size: 20px;
     color: white;
     z-index: 100;
     border-radius: 0 5px 5px 0;
+  }
+  #mySidenav > a:first-child > i{
+    margin-left: 58px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    margin-top: 10px !important;
+  }
+  #mySidenav > a:nth-child(2) > i{
+    margin-left: 44px;
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-top: 10px !important;
+  }
+  #mySidenav > a:last-child > i{
+    margin-left: 22px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    margin-top: 10px !important;
   }
   
   #mySidenav a:hover {
@@ -80,13 +98,13 @@ section{
   }
   
   #analysis_side {
-    top: 80px;
+    top: 94px;
     background-color: rgba(241, 68, 68, 0.8);
   }
   
   #contact_side {
-    top: 140px;
-    background-color: rgb(99, 99, 99, .8);
+    top: 168px;
+    background-color: rgba(46, 177, 68, 0.8);
   }
 
 /*====================================================
@@ -183,19 +201,23 @@ section{
     padding: 60px 0 60px 0;
 }
 
-.content-title h3 {
-    font-size: 30px;
-    font-weight: 700;
+.content-title{
+    font-size: 30px !important;
+    font-weight: 500 !important;
     text-align: center;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
+    transition: .3s ease-in-out !important;
 }
 
-.content-title-white h3 {
+.content-title-white {
     color: #fff;
+}
+.margin_top{
+    margin-top: 100px !important;
 }
 
 .content-title-underline {
-    width: 100px;
+    width: 50px;
     height: 3px;
     background-color: rgb(32, 137, 197);
     margin: 0 auto 30px auto;
@@ -231,9 +253,10 @@ div.content{
                        MAIN (Generic)
 ======================================================*/
 #main{
-    height: 600px !important;
+    height: auto;
     width: 100% !important;
-    background-color: rgba(243, 243, 243, .7) !important;
+    background-color: #fff !important;
+    margin-bottom: 100px !important;
 }
 
 
@@ -243,4 +266,17 @@ div.content{
 .col-centered{
     float: none !important;
     margin: 0 auto !important;
-    }
+}
+
+#feedback{
+    height: 100% !important;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/feedback/feedback.png");
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
