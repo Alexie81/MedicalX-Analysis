@@ -1,0 +1,5 @@
+First part of results it's finished ! 
+Need verification...
+
+
+git add -all -force : "git add ."

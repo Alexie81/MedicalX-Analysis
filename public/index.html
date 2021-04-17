@@ -60,7 +60,7 @@
                     <div class="content-title-underline"></div>
                 </div>
                 <div class="col-lg-8" style="float: none !important;margin: 0 auto !important;">
-                    <form class="wow animated fadeInLeft" data-wow-delay=".7s">
+                    <form class="wow animated fadeInLeft" data-wow-delay=".7s" id="form_main">
                         <div class="form-group" id="hemoglobina_form_group">
                           <h3>Hematologie</h3>
                           <div class="row">
@@ -78,7 +78,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="hematologie_hematocrit">Hematocrit: </label><br />
-                          <input type="number" class="form-control" id="hematologie_hemoglobina" aria-describedby="emailHelp" placeholder="Hematocrit...">
+                          <input type="number" class="form-control" id="hematologie_hematocrit" aria-describedby="emailHelp" placeholder="Hematocrit...">
                         </div>
 
                         <div class="form-group col-md-6">
@@ -315,7 +315,7 @@
                             <h3>Microbiologie</h3>
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label for="imunologie_anti_hiv">Urocultura: </label><br />
+                                    <label for="urocultura_mic">Urocultura: </label><br />
                                     <select class="form-control" id="urocultura_mic">
                                         <option value="" selected disabled>--Selecteaza--</option>
                                         <option value="mic">Bacteriurie < 100 UFC/mL (sub limita de detectie a metodei)</option>
@@ -353,7 +353,7 @@
                         <div class="content-title-underline"></div>
                     </div>
                     <div class="col-md-8" style="float: none !important; margin: 0 auto !important;" align="center">
-                        <form style="margin-top: 50px ;">
+                        <form style="margin-top: 50px ;" id="feedback_form_main">
                         <div class="row">
                             <div class="form-group col-md-8" style="float: none !important; margin: 0 auto !important;">
                                 <input type="text" class="form-control" id="feedback_input_name" aria-describedby="Nume" placeholder="Nume..."><br />
@@ -433,8 +433,8 @@
                                       <ellipse transform="scale(-1) rotate(45 454 -906)" cx="375.3" cy="188.1" rx="12" ry="8.1"/>
                                       <ellipse cx="155.6" cy="205.3" rx="81.1" ry="81"/>
                                     </g>
-                                    <ellipse cx="155.6" cy="205.3" rx="44.2" ry="44.2" fill="#3e4347"/>
-                                    <ellipse transform="scale(-1) rotate(45 454 -421.3)" cx="174.5" cy="188" rx="12" ry="8.1" fill="#fff"/>
+                                    <ellipse cx="155.6" cy="205.3" rx="44.2" ry="44.2" fill="#3e4347" />
+                                    <ellipse transform="scale(-1) rotate(45 454 -421.3)" cx="174.5" cy="188" rx="12" ry="8.1" fill="#fff" />
                                   </svg>
                                           <svg class="rating-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                           <circle cx="256" cy="256" r="256" fill="#ffd93b"/>
@@ -475,7 +475,7 @@
                         <br />
                         <div class="row">
                             <div class="form-group col-md-12">
-                                <a href="#" class="sub1" role="button" type="submit">Trimite</a>
+                                <a id="sub_feed" class="sub1" role="button" type="submit">Trimite</a>
                             </div>
 
                         </div>
@@ -518,16 +518,14 @@
 
     <!-- easing -->
     <script src="js/easing/jquery.easing.1.3.js"></script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <!-- Sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 
     <!-- custom JS -->
     <script src="js/main.js"></script>
-</body>
+    
+  </body>
 
 </html>
