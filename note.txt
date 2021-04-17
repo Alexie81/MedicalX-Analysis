@@ -3,3 +3,5 @@ Need verification...
 
 
 git add -all -force : "git add ."
+
+ssh added
