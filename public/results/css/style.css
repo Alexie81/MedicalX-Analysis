@@ -1,0 +1,16 @@
+.form-control{
+    background-color: rgba(247, 247, 247, 0.911) !important;
+    cursor: default !important;
+  }
+
+  .ok{
+      border-color: green;
+      background-color: rgb(222, 247, 222) !important;
+      cursor: pointer !important;
+  }
+
+  .nu{
+    border-color: rgb(255, 17, 0);
+    background-color: rgb(247, 222, 222) !important;
+    cursor: pointer !important;
+}

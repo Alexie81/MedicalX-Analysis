@@ -426,7 +426,7 @@ for (let index = 1; index != 36; ++index) {
 
 localStorage.setItem('session', JSON.stringify(data));
 // console.log(JSON.stringify(data));
-setTimeout(function(){window.location = 'results/index.html';}, 500);
+setTimeout(function(){window.location = 'results/';}, 500);
 }
 );
 

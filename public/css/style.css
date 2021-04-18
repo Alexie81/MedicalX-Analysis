@@ -242,9 +242,10 @@ h3.title{
     color: rgb(32, 137, 197);
     font-size: 30px;
 }
+/* JUST for fun :) */
 h3.title_rgb{
     background: -webkit-linear-gradient(rgb(32, 137, 197), rgb(51, 187, 119));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -480,8 +481,4 @@ div.content{
 }
 textarea{
     resize: none;
-}
-.form-control{
-  background-color: rgba(247, 247, 247, 0.911) !important;
-  cursor: text !important;
 }

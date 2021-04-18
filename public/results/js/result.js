@@ -146,100 +146,139 @@ document.getElementById('sub_feed').addEventListener('click', function(e){
 let data = {};
 data = JSON.parse(localStorage.getItem('session'));
 console.log(data)
-function fill(data, name, index, um) {
+function fill(data, name, index, um, min, max) {
     document.getElementById(name).value = `${String(data[index][name])}`;
     if(document.getElementById(name).value === "-" || document.getElementById(name).value === ""){
         document.getElementById(name).value =  "-";
     } else {
-        document.getElementById(name).value = `${String(data[index][name])}` + ' ' + um;
+        document.getElementById(name).value = `${String(data[index][name])}` + ' ' + um + '   ('+ min +' - ' + max + ' ' + um +')';
+        if(parseFloat(data[index][name]) < min){
+            $("#" + name).addClass('nu');
+            $("#" + name).removeClass('ok');
+            console.log('1')
+        } else if(parseFloat(data[index][name]) >= max){
+                $("#" + name).addClass('nu');
+                $("#" + name).removeClass('ok');
+                console.log('3')
+            } else if(parseFloat(data[index][name]) >= min){
+            $("#" + name).addClass('ok');
+            $("#" + name).removeClass('nu');
+            console.log('2')
+        } else {
+            $("#" + name).removeClass('ok');
+            $("#" + name).removeClass('nu');
+        }
     }    
 } 
 
 all = {
-    'hematologie_eritrocite': [4, " *10^6/ul"],
-    'hematologie_hemoglobina': [5, " g/dL"],
-    'hematologie_hematocrit': [6, " %"],
-    'hematologie_vem': [7, " fL"],
-    'hematologie_hem': [8, " pg"],
-    'hematologie_chem': [9, " g/dL"],
-    'hematologie_rdv_cv': [10, " %"],
-    'hematologie_leucocite': [11, " *10^3/ul"],
-    'hematologie_neutrofile': [12, " *10^3/ul"],
-    'hematologie_neutrofile_suta': [13, " %"],
-    'hematologie_eozinofile': [14, " *10^3/ul"],
-    'hematologie_eozinofile_suta': [15, " %"],
-    'hematologie_basofile': [16, " *10^3/ul"],
-    'hematologie_basofile_suta': [17, " %"],
-    'hematologie_limfocite': [18, " *10^3/ul"],
-    'hematologie_limfocite_suta': [19, " %"],
-    'hematologie_monocite': [20, " *10^3/ul"],
-    'hematologie_monocite_suta': [21, " %"],
-    'hematologie_trombocite': [22, " *10^3/ul"],
-    'hematologie_vtm': [23, " fL"],
-    'hematologie_pct': [24, " %"],
-    'hematologie_pdw': [25, " fL"],
-    'hemostaza_timp': [26, " s"],
-    'hemostaza_activitate': [27, " %"],
-    'hemostaza_inr': [28, " "],
-    'biochimie_acid_uric': [29, " mg/dL"],
-    'biochimie_creatinina_serica': [30, " mg/dl"],
-    'biochimie_uree_serica': [31, " md/dl"],
-    'biochimie_glucoza_serica': [32, " mg/dL"],
-    'biochimie_tgo_ast': [33, " U/L"],
-    'biochimie_tgp_alt': [34, " U/L"],
-    'biochimie_sideremie': [35, " ug/dl"],
-    'imunologie_ag_hbs': [36, " S/CO"],
-    'imunologie_anti_hcv': [37, " S/CO"],
-    'imunologie_anti_hiv': [38, " S/CO"]
+    'hematologie_eritrocite': [4, " *10^6/ul", 3.8, 5.1],
+    'hematologie_hemoglobina': [5, " g/dL", 11.7, 15.5],
+    'hematologie_hematocrit': [6, " %", 34, 45],
+    'hematologie_vem': [7, " fL", 81, 100],
+    'hematologie_hem': [8, " pg", 27, 34],
+    'hematologie_chem': [9, " g/dL", 32, 36],
+    'hematologie_rdv_cv': [10, " %", 11.5, 14.5],
+    'hematologie_leucocite': [11, " *10^3/ul", 4.0, 11.0],
+    'hematologie_neutrofile': [12, " *10^3/ul", 2.0, 8.0],
+    'hematologie_neutrofile_suta': [13, " %", 45, 80],
+    'hematologie_eozinofile': [14, " *10^3/ul", 0.0, 0.7],
+    'hematologie_eozinofile_suta': [15, " %", 0, 7],
+    'hematologie_basofile': [16, " *10^3/ul", 0.0, 0.2],
+    'hematologie_basofile_suta': [17, " %", 0, 2],
+    'hematologie_limfocite': [18, " *10^3/ul", 1.0, 4.0],
+    'hematologie_limfocite_suta': [19, " %", 20, 55],
+    'hematologie_monocite': [20, " *10^3/ul", 0.0, 1.0],
+    'hematologie_monocite_suta': [21, " %", 0, 15],
+    'hematologie_trombocite': [22, " *10^3/ul", 150, 450],
+    'hematologie_vtm': [23, " fL", 7.4, 10.4],
+    'hematologie_pct': [24, " %", 0.16, 0.48],
+    'hematologie_pdw': [25, " fL", 12, 16.5],
+    'hemostaza_timp': [26, " s", 9.1, 12.1],
+    'hemostaza_activitate': [27, " %", 72, 144],
+    'hemostaza_inr': [28, " ", 0.81, 1.20],
+    'biochimie_acid_uric': [29, " mg/dL", 2.6, 6],
+    'biochimie_creatinina_serica': [30, " mg/dl", 0, 1.10],
+    'biochimie_uree_serica': [31, " md/dl", 0, 40],
+    'biochimie_glucoza_serica': [32, " mg/dL", 60, 105],
+    'biochimie_tgo_ast': [33, " U/L", 0, 34],
+    'biochimie_tgp_alt': [34, " U/L", 0, 55],
+    'biochimie_sideremie': [35, " ug/dl", 37, 170],
+    'imunologie_ag_hbs': [36, " S/CO", 0, 1.0],
+    'imunologie_anti_hcv': [37, " S/CO", 0, 1.0],
+    'imunologie_anti_hiv': [38, " S/CO", 0, 1.0]
 }
 
 for (var field in all) {
     if (all.hasOwnProperty(field)) {           
         console.log(all[field])
-        fill(data, field, all[field][0], all[field][1]);
+        fill(data, field, all[field][0], all[field][1], all[field][2], all[field][3]);
     }
 }
 
 var sel_option = ``;
-
 if(data[0].imunologie_ag_hbs_select === "Nonreactiv"){
     document.getElementById('no1').selected = true;
+    $("#imunologie_ag_hbs_select").removeClass("nu");
+    $("#imunologie_ag_hbs_select").addClass("ok");
 } else if(data[0].imunologie_ag_hbs_select === "Reactiv"){
     document.getElementById('no2').selected = true;
+    $("#imunologie_ag_hbs_select").addClass("nu");
+    $("#imunologie_ag_hbs_select").removeClass("ok");
 } else {
     sel_option = `<option id="__no1" value="">-</option>`;
     $("#imunologie_ag_hbs_select").append(sel_option);
     document.getElementById('__no1').selected = true;
+    $("#imunologie_ag_hbs_select").removeClass("nu");
+    $("#imunologie_ag_hbs_select").removeClass("ok");
 }
 
 
 if(data[1].imunologie_anti_hcv_select === "Nonreactiv"){
     document.getElementById('no3').selected = true;
-} else if(data[0].imunologie_ag_hbs_select === "Reactiv"){
+    $("#imunologie_anti_hcv_select").removeClass("nu");
+    $("#imunologie_anti_hcv_select").addClass("ok");
+} else if(data[1].imunologie_ag_hbs_select === "Reactiv"){
     document.getElementById('no4').selected = true;
+    $("#imunologie_anti_hcv_select").addClass("nu");
+    $("#imunologie_anti_hcv_select").removeClass("ok");
 } else {
     sel_option = `<option id="__no2" value="">-</option>`;
     $("#imunologie_anti_hcv_select").append(sel_option);
     document.getElementById('__no2').selected = true;
+    $("#imunologie_anti_hcv_select").removeClass("nu");
+    $("#imunologie_anti_hcv_select").removeClass("ok");
 }
 
 
 if(data[2].imunologie_anti_hiv_select === "Nonreactiv"){
     document.getElementById('no5').selected = true;
-} else if(data[0].imunologie_ag_hbs_select === "Reactiv"){
+    $("#imunologie_anti_hiv_select").removeClass("nu");
+    $("#imunologie_anti_hiv_select").addClass("ok");
+} else if(data[2].imunologie_ag_hbs_select === "Reactiv"){
     document.getElementById('no6').selected = true;
+    $("#imunologie_anti_hiv_select").addClass("nu");
+    $("#imunologie_anti_hiv_select").removeClass("ok");
 } else {
     sel_option = `<option id="__no3" value="">-</option>`;
     $("#imunologie_anti_hiv_select").append(sel_option);
     document.getElementById('__no3').selected = true;
+    $("#imunologie_anti_hiv_select").removeClass("nu");
+    $("#imunologie_anti_hiv_select").removeClass("ok");
 }
 
 if(data[3].urocultura_mic === "mic"){
     document.getElementById('no7').selected = true;
-} else if(data[0].imunologie_ag_hbs_select === "mare"){
+    $("#urocultura_mic").removeClass("nu");
+    $("#urocultura_mic").addClass("ok");
+} else if(data[3].imunologie_ag_hbs_select === "mare"){
     document.getElementById('no8').selected = true;
+    $("#urocultura_mic").addClass("nu");
+    $("#urocultura_mic").removeClass("ok");
 } else {
     sel_option = `<option id="__no4" value="">-</option>`;
     $("#urocultura_mic").append(sel_option);
     document.getElementById('__no4').selected = true;
+    $("#urocultura_mic").removeClass("nu");
+    $("#urocultura_mic").removeClass("ok");
 }

@@ -1,0 +1,2 @@
+This version is just for server compiling, no local !
+Use just the link: https://medicalx-analysis.web.app/
