@@ -482,3 +482,6 @@ div.content{
 textarea{
     resize: none;
 }
+.form-control{
+  transition: .3s all ease-in-out !important;
+}

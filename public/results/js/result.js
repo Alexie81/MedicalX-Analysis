@@ -238,7 +238,7 @@ if(data[1].imunologie_anti_hcv_select === "Nonreactiv"){
     document.getElementById('no3').selected = true;
     $("#imunologie_anti_hcv_select").removeClass("nu");
     $("#imunologie_anti_hcv_select").addClass("ok");
-} else if(data[1].imunologie_ag_hbs_select === "Reactiv"){
+} else if(data[1].imunologie_anti_hcv_select === "Reactiv"){
     document.getElementById('no4').selected = true;
     $("#imunologie_anti_hcv_select").addClass("nu");
     $("#imunologie_anti_hcv_select").removeClass("ok");
@@ -255,7 +255,7 @@ if(data[2].imunologie_anti_hiv_select === "Nonreactiv"){
     document.getElementById('no5').selected = true;
     $("#imunologie_anti_hiv_select").removeClass("nu");
     $("#imunologie_anti_hiv_select").addClass("ok");
-} else if(data[2].imunologie_ag_hbs_select === "Reactiv"){
+} else if(data[2].imunologie_anti_hiv_select === "Reactiv"){
     document.getElementById('no6').selected = true;
     $("#imunologie_anti_hiv_select").addClass("nu");
     $("#imunologie_anti_hiv_select").removeClass("ok");
@@ -271,7 +271,7 @@ if(data[3].urocultura_mic === "mic"){
     document.getElementById('no7').selected = true;
     $("#urocultura_mic").removeClass("nu");
     $("#urocultura_mic").addClass("ok");
-} else if(data[3].imunologie_ag_hbs_select === "mare"){
+} else if(data[3].urocultura_mic === "mare"){
     document.getElementById('no8').selected = true;
     $("#urocultura_mic").addClass("nu");
     $("#urocultura_mic").removeClass("ok");
